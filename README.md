@@ -1,27 +1,39 @@
-# Frontend
+# Football World Cup Score Board.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+##  User Story  
 
-## Development server
+    You are working on a sports data company, and we would like you to develop a new Live
+    Football World Cup Score Board that shows matches and scores.
+    The board supports the following operations:
+        1. Start a game. When a game starts, it should capture (being initial score 0 – 0):
+            a. Home team
+            b. Away team
+        2. Finish game. It will remove a match from the scoreboard.
+        3. Update score. Receiving the pair score; home team score and away team score
+updates a game score.
+        4. Get a summary of games by total score. Those games with the same total score will
+be returned ordered by the most recently added to our system
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Functional requirement  and Use case 
 
-## Code scaffolding
+    1. User can able to view live scoreboard (maches and scores).
+    2. User can able to start a game with score (0-0)
+    3. User can able to stop the active game from the scoreboard
+    4. User can able to get the summery of games by total score. 
+  
+### Display Criteria for total score 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    Those games with the same total score will be returned ordered by the most recently added to our system.
 
-## Build
+## Refrence class Digarm 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Technology 
+     
+     Framework - @angular/cli - ~13.3.1 and @angular/core: 13.3.0
+     TDD - Jasmine and Karma 
+     Runtime - Node v16.14.2
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    
