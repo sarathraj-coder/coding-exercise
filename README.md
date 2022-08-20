@@ -15,8 +15,8 @@
 ## Functional requirement  and Use case 
 
     1. User can able to view live scoreboard (maches and scores).
-    2. User can able to start a game with score (0-0)
-    3. User can able to stop the active game from the scoreboard
+    2. User can able to start a game with score (0-0).
+    3. User can able to stop the active game from the scoreboard. 
     4. User can able to get the summery of games by total score. 
   
 ### Display Criteria for total score 
@@ -32,6 +32,12 @@
      Runtime - Node v16.14.2
 
 
+### Use Cases Priority 
 
+    -  User can able to start a game with score (0-0).
+    -  User can able to view live scoreboard (maches and scores).
+    -  User can able to stop the active game from the scoreboard. 
+    -  User can able to get the summery of games by total score. 
+    
 
     
