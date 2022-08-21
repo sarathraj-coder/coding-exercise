@@ -25,12 +25,13 @@
 
 ## Refrence class Digarm 
 
+   ![Diagram](./design/class_diagram.png)
+
 ## Technology 
      
      Framework - @angular/cli - ~13.3.1 and @angular/core: 13.3.0
      TDD - Jasmine and Karma 
      Runtime - Node v16.14.2
-
 
 ### Use Cases Priority 
 
