@@ -1,0 +1,47 @@
+[
+    {
+        "id":1,
+        "game_id":1,
+        "homeTeamScore":0,
+        "awayTeamScore":0,
+        "createdBy":1,
+        "createdOn":"2022-08-22T16:26:18.460Z"
+      
+    },
+    {
+        "id":1,
+        "game_id":2,
+        "homeTeamScore":0,
+        "awayTeamScore":0,
+        "createdBy":1,
+        "createdOn":"2022-08-22T16:26:18.460Z"
+      
+    },
+    {
+        "id":1,
+        "game_id":3,
+        "homeTeamScore":0,
+        "awayTeamScore":0,
+        "createdBy":1,
+        "createdOn":"2022-08-22T16:26:18.460Z"
+      
+    },
+    {
+        "id":1,
+        "game_id":4,
+        "homeTeamScore":0,
+        "awayTeamScore":0,
+        "createdBy":1,
+        "createdOn":"2022-08-22T16:26:18.460Z"
+      
+    },
+    {
+        "id":1,
+        "game_id":5,
+        "homeTeamScore":0,
+        "awayTeamScore":0,
+        "createdBy":1,
+        "createdOn":"2022-08-22T16:26:18.460Z"
+      
+    }
+]
