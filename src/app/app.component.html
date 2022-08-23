@@ -38,19 +38,7 @@
 
 
 
-  .card_score {
-    border-radius: 4px;
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    height: 150px;
-    width: 200px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
+ 
 
   .score_text{
     font-size: medium;
@@ -75,33 +63,10 @@
   </div>
 
   <!-- Resources -->
-  <h2>New Match</h2>
-  <p>Here are some links to help you get started:</p>
-
-  <div class="card-container">
-    <div class="card">
-      <span>Home Team</span>
-      <input type="text" />
-    </div>
-
-    <div class="card">
-      <span>Away Team</span>
-      <input type="text" />
-    </div>
-    <div class="card">
-      <button value="Start Game" > Start Game </button>
-    </div>
-   
-
-  </div>
+<app-game></app-game>
 
   <!-- Next Steps -->
-  <h2>Score Board</h2>
-  <div class="card_score">
-    <span class="score_text"> Home 1 - 1 Away </span> <br/>
-    <button> Stop Game </button> <br/>
-    <button> Summery  </button><br/>
-  </div>
+ <app-scoreboard></app-scoreboard>
 
   <h2>Summery</h2>
   <div class="card-container">
