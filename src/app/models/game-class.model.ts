@@ -1,16 +1,15 @@
 export class GameClass {
-   private id:number;
-   private homeTeam:string;
-   private awayTeam:string;
-   private status:Boolean;
-   private createdOn:Date;
-   private createdBy:number;
-   private updatedOn:Date;
-   private updatedBy:number;
+    id:number;
+    homeTeam:string;
+    awayTeam:string;
+    status:Boolean;
+    createdOn:string;
+    updatedOn:string;
+    createdBy:number;
+    updatedBy:number;
 
-  
    constructor(id:number,homeTeam:string,awayTeam:string,status:Boolean,
-    createdOn:Date,createdBy:number,updatedOn:Date,updatedBy:number){
+    createdOn:string,createdBy:number,updatedOn:string,updatedBy:number){
         this.id=id
         this.homeTeam=homeTeam
         this.awayTeam=awayTeam

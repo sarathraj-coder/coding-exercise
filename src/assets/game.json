@@ -1,48 +1,52 @@
 [
-    { "id":1,
-      "homeTeam": "Mexico",
-   "awayTeam": "Canada",
-   "status":true,
-   "createdOn":"2022-08-22T16:26:18.460Z",
-   "createdBy":1,
-   "updatedOn":"2022-08-22T16:26:18.460Z",
-   "updatedBy":1
-   },
-   { "id":2,
-   "homeTeam": "Spain",
-"awayTeam": "Brazil",
-"status":true,
-"createdOn":"2022-08-22T16:26:18.460Z",
-"createdBy":1,
-"updatedOn":"2022-08-22T16:26:18.460Z",
-"updatedBy":1
-},
-{ "id":3,
-   "homeTeam": "Germany",
-"awayTeam": "France",
-"status":true,
-"createdOn":"2022-08-22T16:26:18.460Z",
-"createdBy":1,
-"updatedOn":"2022-08-22T16:26:18.460Z",
-"updatedBy":1
-},
-{ "id":4,
-   "homeTeam": "Uruguay",
-"awayTeam": "Italy",
-"status":true,
-"createdOn":"2022-08-22T16:26:18.460Z",
-"createdBy":1,
-"updatedOn":"2022-08-22T16:26:18.460Z",
-"updatedBy":1
-},
-{ "id":5,
-   "homeTeam": "Argentina",
-"awayTeam": "Australia",
-"status":true,
-"createdOn":"2022-08-22T16:26:18.460Z",
-"createdBy":1,
-"updatedOn":"2022-08-22T16:26:18.460Z",
-"updatedBy":1
-}
-
+  {
+    "id": 1,
+    "homeTeam": "Mexico",
+    "awayTeam": "Canada",
+    "status": true,
+    "createdOn": "2022-08-22T16:26:18.460Z",
+    "createdBy": 1,
+    "updatedOn": "2022-08-22T16:26:18.460Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 2,
+    "homeTeam": "Spain",
+    "awayTeam": "Brazil",
+    "status": true,
+    "createdOn": "2022-08-22T16:26:18.460Z",
+    "createdBy": 1,
+    "updatedOn": "2022-08-22T16:26:18.460Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 3,
+    "homeTeam": "Germany",
+    "awayTeam": "France",
+    "status": true,
+    "createdOn": "2022-08-22T16:26:18.460Z",
+    "createdBy": 1,
+    "updatedOn": "2022-08-22T16:26:18.460Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 4,
+    "homeTeam": "Uruguay",
+    "awayTeam": "Italy",
+    "status": true,
+    "createdOn": "2022-08-22T16:26:18.460Z",
+    "createdBy": 1,
+    "updatedOn": "2022-08-22T16:26:18.460Z",
+    "updatedBy": 1
+  },
+  {
+    "id": 5,
+    "homeTeam": "Argentina",
+    "awayTeam": "Australia",
+    "status": true,
+    "createdOn": "2022-08-22T16:26:18.460Z",
+    "createdBy": 1,
+    "updatedOn": "2022-08-22T16:26:18.460Z",
+    "updatedBy": 1
+  }
 ]

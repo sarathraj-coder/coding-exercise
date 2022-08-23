@@ -6,4 +6,4 @@ export class ScoreBoard implements IScoreBoard {
     getListOfGames(): ScoreClass[] {
         throw new Error("Method not implemented.");
     }
-  }
+}
