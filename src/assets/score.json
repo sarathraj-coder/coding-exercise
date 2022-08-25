@@ -9,7 +9,7 @@
       
     },
     {
-        "id":1,
+        "id":2,
         "game_id":2,
         "homeTeamScore":0,
         "awayTeamScore":0,
@@ -18,7 +18,7 @@
       
     },
     {
-        "id":1,
+        "id":3,
         "game_id":3,
         "homeTeamScore":0,
         "awayTeamScore":0,
@@ -27,7 +27,7 @@
       
     },
     {
-        "id":1,
+        "id":4,
         "game_id":4,
         "homeTeamScore":0,
         "awayTeamScore":0,
@@ -36,7 +36,7 @@
       
     },
     {
-        "id":1,
+        "id":5,
         "game_id":5,
         "homeTeamScore":0,
         "awayTeamScore":0,

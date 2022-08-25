@@ -1,6 +1,44 @@
-<h2>Score Board component</h2>
-<div class="card_score">
-  <span class="score_text"> Home 1 - 1 Away </span> <br/>
-  <button> Stop Game </button> <br/>
-  <button> Summery  </button><br/>
+
+
+<h2>Summery</h2>
+<button (click)="summery()" > Summery </button>
+
+<table>
+  <tr><th>Home</th> <th>Away</th></tr>
+  <tr  *ngFor="let item of scoresboardSummery"><td>{{item.game.homeTeam}} - {{item.score.homeTeamScore}} </td> <td>{{item.game.awayTeam}}-{{item.score.awayTeamScore}} </td></tr>
+</table>
+
+<h2>Score Board</h2>
+
+<button (click)="refresh()" > Refresh </button>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm" *ngFor="let item of scoresboards">
+      <div>
+        <div class="row card_score" [hidden]="item.game.status==false" >
+        <span class="score_text">Game Id :  {{item.game.id}} </span> <br/>
+        <span class="score_text">Home Team :  {{item.game.homeTeam}} - {{item.score.homeTeamScore}} </span> <br/>
+        <span class="score_text">Away Team :  {{item.game.awayTeam}} - {{item.score.awayTeamScore}}</span> <br/>
+        <button (click)="stopGame(item.game.id)" [hidden]="item.game.status==false"> Stop Game </button> <br/>
+        <div>{{item.game.status==true?"Active":"Stopped"}}</div>
+        <div class="card" [hidden]="item.game.status==false">
+          <span>Home Team</span>
+          <input  type="text" [(ngModel)]="item.score.homeTeamScore" required />
+        </div>
+      
+        <div class="card" [hidden]="item.game.status==false">
+          <span>Away Team</span>
+          <input type="text"  [(ngModel)]="item.score.awayTeamScore" required />
+        </div>
+        <div class="card" [hidden]="item.game.status==false">
+          <button value="Update Score" (click)="updateScore(item.game.id,item.score.homeTeamScore,item.score.awayTeamScore)" > Update Score </button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
+

@@ -11,7 +11,9 @@ import { ScoreClass } from '../models/score-class.model';
 export class CollectionServiceService {
 
   private static instance: CollectionServiceService;
-  private constructor() { }
+  private constructor() {
+    CollectionServiceService.dummyGames()
+   }
   public static getInstance(): CollectionServiceService {
     if (!CollectionServiceService.instance) {
       CollectionServiceService.instance = new CollectionServiceService();
@@ -20,44 +22,26 @@ export class CollectionServiceService {
     return CollectionServiceService.instance;
 }
 
-  games: GameClass[] = GamesJson;
-  users: UserClass[] = UserJson;
-  scores: ScoreClass[] = ScoreJson;
 
+public static dummyGames(){
+  let date = new Date().toUTCString()
+  CollectionServiceService.games.push(new GameClass(1,"Mexico","Canada",true,date,1,date,1))
+  CollectionServiceService.games.push(new GameClass(2,"Spain","Brazil",true,date,1,date,1))
+  CollectionServiceService.games.push(new GameClass(3,"Germany","France",true,date,1,date,1))
+  CollectionServiceService.games.push(new GameClass(4,"Uruguay","Italy",true,date,1,date,1))
+  CollectionServiceService.games.push(new GameClass(5,"Argentina","Australia",true,date,1,date,1))
 
-  getGames(): GameClass[]{
-    return this.games
-  }
+  CollectionServiceService.users.push(new UserClass(1,"sarath"));
 
-  createGame(){
-    //TODO 
-  }
+  CollectionServiceService.scores.push(new ScoreClass(1,1,0,0,date,1));
+  CollectionServiceService.scores.push(new ScoreClass(2,2,0,0,date,1));
+  CollectionServiceService.scores.push(new ScoreClass(3,3,0,0,date,1));
+  CollectionServiceService.scores.push(new ScoreClass(4,4,0,0,date,1));
+  CollectionServiceService.scores.push(new ScoreClass(5,5,0,0,date,1));
+}
 
-  createScore(){
-    //TODO 
-  }
-
-  insertScore(){
-
-  }
- 
-  getUsers():UserClass[]{
-    return this.users
-  }
-
-
-  getAllScores():ScoreClass[]{
-    return this.scores
-  }
-
-
-  getgameSummery(){
-    //TODO 
-  }
-
-
-  
-
-
+public static games: GameClass[] = []
+public static  users: UserClass[] = []
+public static scores: ScoreClass[] = []
 
 }
