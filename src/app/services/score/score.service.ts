@@ -38,20 +38,4 @@ createScore(gameId:number,homeTeamScore:number,awayTeamScore:number,createdBy:nu
 }
 
 
-
-
-
-//   getGameScoreSummery(gameId:number): ScoreClass[]{
-//    return this.scores.filter(it => it.game_id==gameId)
-//   }
-
-//   getLatestScoreOfGame(gameId:number): ScoreClass{
-//     let scoresSelected=  this.scores.filter(it => it.game_id==gameId)
-//     let latest = scoresSelected.reduce(function (r, a) {
-//       return new Date(r.createdOn) > new Date(a.createdOn) ? r : a;
-//   });
-//   return latest
-//    }
-
-
 }

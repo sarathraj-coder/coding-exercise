@@ -5,7 +5,7 @@ import { IScoreBoard } from "./scoreboard.interface";
 @Injectable({
   providedIn: 'root'
 })
-export class ScoreBoardService {
+export class ScoreBoardService implements IScoreBoard {
 
   constructor() { }
 
