@@ -38,34 +38,13 @@ describe('ScoreboardComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should create a game', () => {
-  //   expect(component).toBeTruthy();
-  // });
-
-   // it('it should get all games', () => {
-  //  // expect(component).toBeTruthy();
-  //   const getAllGames = spyOn(gameService,"getGames")
-  //   component.ngOnInit();
-  //   expect(getAllGames).toHaveBeenCalled();
-  // });
-
-  // it('create Game', () => {
-  //   // expect(component).toBeTruthy();
-  //    const startGame = spyOn(component,'startGame')
-  //    component.ngOnInit
-  //    component.home="Home_Team_A"
-  //    component.home="Home_Team_B"
-  //    component.startGame()
-  //    expect(startGame).toHaveBeenCalled();
-  //  });
-
   it('Getting game list ', () => {
        const loadData = spyOn(component,'loadData')
        component.ngOnInit();
        expect(loadData).toHaveBeenCalled();
   });
 
-  it('Updating score of Team 1', () => {
+  it('Updating score of Team 1 to be called', () => {
     const loadData = spyOn(component,'updateScore')
        component.ngOnInit();
        component.updateScore(1,1,1);
@@ -74,14 +53,13 @@ describe('ScoreboardComponent', () => {
 
 
   it('Updating score of Team 1', () => {
-    //const loadData = spyOn(component,'updateScore')
        component.ngOnInit();
        component.updateScore(1,1,1)
-       let scores =  scoreService.getAllScores().filter(item => item.id==1)
+       let scores =  scoreService.getAllScores().filter(item => item.game_id==1)
        let latest = scores.reduce(function (r, a) {
         return new Date(r.createdOn) > new Date(a.createdOn) ? r : a;
         });
-       expect(latest.createdBy).toBe(1);
+       expect(latest.homeTeamScore).toBe(1);
   });
 
   it('Stop Game', () => {
