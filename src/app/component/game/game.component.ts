@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { GameClass } from 'src/app/models/game-class.model';
-import { ScoreClass } from 'src/app/models/score-class.model';
-import { GameService } from 'src/app/services/game/game.service';
-import { ScoreService } from 'src/app/services/score/score.service';
+import { IGame } from 'src/app/services/game/game.interface';
+import { IScore } from 'src/app/services/score/score.interface';
 
 
 @Component({
@@ -15,7 +14,8 @@ export class GameComponent implements OnInit {
    home=''
    away=''
 
-  constructor(private gameService:GameService,private scoreService:ScoreService) { 
+  constructor(@Inject('IGame')  private gameService:IGame, 
+  @Inject('IScore') private scoreService:IScore) { 
    
   }
 

@@ -68,6 +68,7 @@ export class ScoreboardComponent implements OnInit {
     alert("stopped")
    }
   }
+  
   summery(){
     this.scoresboardSummery=[]
     this.scores =  this.scoreboardService.getLatestScoreBoard()

@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { ScoreboardComponent } from './component/scoreboard/scoreboard.component';
 import { GameComponent } from './component/game/game.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './services/user/user.service';
+import { ScoreService } from './services/score/score.service';
+import { ScoreBoardService } from './services/scoreboard/score-board.service';
+import { GameService } from './services/game/game.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [], 
+  providers: [
+    {provide:'IGame',useClass:GameService},
+    {provide:'IScore',useClass:ScoreService},
+    {provide:'IScoreBoard',useClass:ScoreBoardService},
+    {provide:'IUser',useClass:UserService}
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

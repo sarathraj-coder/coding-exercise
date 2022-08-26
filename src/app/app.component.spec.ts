@@ -27,9 +27,5 @@ describe('AppComponent', () => {
     expect(service).toBeTruthy();
   });
 
-  // it('User can able to start a game with score (0-0).', () => {
-  //   expect("tfalrue").toBeFalsy
-  // });
-
 
 });

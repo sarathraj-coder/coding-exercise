@@ -52,9 +52,10 @@ describe('ScoreboardComponent', () => {
   });
 
 
-  it('Updating score of Team 1', () => {
+  it('Updating score of Team 1', () => { 
        component.ngOnInit();
        component.updateScore(1,1,1)
+
        let scores =  scoreService.getAllScores().filter(item => item.game_id==1)
        let latest = scores.reduce(function (r, a) {
         return new Date(r.createdOn) > new Date(a.createdOn) ? r : a;

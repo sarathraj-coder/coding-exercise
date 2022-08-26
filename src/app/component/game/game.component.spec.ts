@@ -1,19 +1,23 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GameService } from '../../services/game/game.service';
-import { ScoreService } from '../../services/score/score.service';
-
+import { IGame } from '../../services/game/game.interface';
+import { IScore } from '../../services/score/score.interface';
 
 import { GameComponent } from './game.component';
 
 describe('GameComponent', () => {
   let component: GameComponent;
   let fixture: ComponentFixture<GameComponent>;
-  let gameService:GameService
-  let scoreService:ScoreService
+  let gameService:IGame
+  let scoreService:IScore
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ GameComponent ],
-      providers:[GameService,ScoreService]
+      providers:[
+        { provide : 'IGame'  ,useValue:{}
+      } ,
+      { provide : 'IScore'  ,useValue:{}
+    } 
+      ]
     })
     .compileComponents();
   });
@@ -21,8 +25,8 @@ describe('GameComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GameComponent);
     component = fixture.componentInstance;
-    gameService = TestBed.inject(GameService);
-    scoreService = TestBed.inject(ScoreService);
+    gameService = TestBed.get('IGame');
+    scoreService = TestBed.get('IScore');
     fixture.detectChanges();
   });
 
