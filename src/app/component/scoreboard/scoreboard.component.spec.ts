@@ -6,12 +6,15 @@ import { GameService } from '../../services/game/game.service';
 
 import { ScoreboardComponent } from './scoreboard.component';
 import { FormsModule } from '@angular/forms';
+import { IGame } from '../../services/game/game.interface';
+import { IScore } from '../../services/score/score.interface';
+import { IScoreBoard } from '../../services/scoreboard/scoreboard.interface';
 
 describe('ScoreboardComponent', () => {
   let component: ScoreboardComponent;
-  let gameService:GameService
-  let scoreService:ScoreService
-  let scoreboardService:ScoreBoardService
+  let gameService:IGame
+  let scoreService:IScore
+  let scoreboardService:IScoreBoard
   let userService:UserService
   let fixture: ComponentFixture<ScoreboardComponent>;
 
@@ -19,7 +22,16 @@ describe('ScoreboardComponent', () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule],
       declarations: [ ScoreboardComponent ],
-      providers:[GameService,ScoreBoardService,ScoreService,UserService]
+      providers:[
+      { provide : 'IGame' , useClass: GameService
+      } ,
+      { provide : 'IScore' , useClass: ScoreService
+    },
+    { provide : 'IScoreBoard' , useClass: ScoreBoardService
+  },
+  { provide : 'IUser' , useClass: UserService
+}
+      ]
     })
     .compileComponents();
   });
@@ -27,10 +39,10 @@ describe('ScoreboardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ScoreboardComponent);
     component = fixture.componentInstance;
-    gameService = TestBed.inject(GameService);
-    scoreService = TestBed.inject(ScoreService);
-    scoreboardService=TestBed.inject(ScoreBoardService);
-    userService = TestBed.inject(UserService);
+    gameService = TestBed.get('IGame');
+    scoreService = TestBed.get('IScore');
+    scoreboardService=TestBed.get('IScoreBoard');
+    userService = TestBed.get('IUser');
     fixture.detectChanges();
   });
 

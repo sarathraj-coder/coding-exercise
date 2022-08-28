@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ScoreBoard } from '../../models/score-board.model';
 import { GameClass } from '../../models/game-class.model';
 import { ScoreClass } from '../../models/score-class.model';
@@ -6,6 +6,10 @@ import { GameService } from '../../services/game/game.service';
 import { ScoreBoardService } from '../../services/scoreboard/score-board.service';
 import { ScoreService } from '../../services/score/score.service';
 import { UserService } from '../../services/user/user.service';
+import { IGame } from '../../services/game/game.interface';
+import { IScoreBoard } from '../../services/scoreboard/scoreboard.interface';
+import { IScore } from '../../services/score/score.interface';
+import { IUser } from '../../services/user/user.interface';
 
 @Component({
   selector: 'app-scoreboard',
@@ -19,10 +23,10 @@ export class ScoreboardComponent implements OnInit {
   scoresboards:ScoreBoard[] =[]
   scoresboardSummery:ScoreBoard[] =[]
   constructor(
-    private scoreboardService:ScoreBoardService,
-    private gameService:GameService,
-    private scoreService:ScoreService,
-    private userService:UserService) { }
+    @Inject("IScoreBoard")   private scoreboardService:IScoreBoard,
+    @Inject("IGame") private gameService:IGame,
+    @Inject("IScore")   private scoreService:IScore,
+    @Inject("IUser")  private userService:IUser) { }
 
   ngOnInit(): void {
     this.loadData()
